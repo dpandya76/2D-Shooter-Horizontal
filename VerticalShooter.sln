@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{7AC2D452-0CC1-4D1D-2EE6-E6D9E0EFAE37}") = "VerticalShooter", "Assembly-CSharp.csproj", "{DB3BF45B-7BCE-AAED-A1EE-76783CB1B637}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3BF45B-7BCE-AAED-A1EE-76783CB1B637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3BF45B-7BCE-AAED-A1EE-76783CB1B637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3BF45B-7BCE-AAED-A1EE-76783CB1B637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3BF45B-7BCE-AAED-A1EE-76783CB1B637}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
