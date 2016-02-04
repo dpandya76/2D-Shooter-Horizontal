@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\AsteroidController.cs" />
+     <Compile Include="Assets\_Scripts\MapController.cs" />
      <Compile Include="Assets\_Scripts\SkyController.cs" />
      <Compile Include="Assets\_Scripts\UFOController.cs" />
  <Reference Include="UnityEngine.UI">
