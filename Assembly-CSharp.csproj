@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AsteroidController.cs" />
+     <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\MapController.cs" />
      <Compile Include="Assets\_Scripts\SkyController.cs" />
+     <Compile Include="Assets\_Scripts\UFOCollider.cs" />
      <Compile Include="Assets\_Scripts\UFOController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
