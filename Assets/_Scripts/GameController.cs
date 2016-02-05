@@ -6,9 +6,13 @@ public class GameController : MonoBehaviour {
 
     private int _scoreValue;
     private int _livesValue;
+    
+
+    [SerializeField]
+    private AudioSource _stageclearSound;
 
 
-    // Public access methods
+    // Public access methods for score and lives
     public int ScoreValue
     {
         get
@@ -54,7 +58,7 @@ public class GameController : MonoBehaviour {
     }
 
 
-    // PUBLIC VARIABLE
+    // PUBLIC  INSTANCE VARIABLES
     public int asteroidNumber = 4;
     public AsteroidController asteroids;
     public Text LivesLabel;
@@ -68,6 +72,7 @@ public class GameController : MonoBehaviour {
     public MapController map;
     public Text HighScoreLabel;
     public Button RestartButton;
+    
 
     // Use this for initialization
     void Start () {
@@ -88,7 +93,7 @@ public class GameController : MonoBehaviour {
         this.LivesValue = 5;
         this.GameOverLabel.enabled = false;
         this.HighScoreLabel.enabled = false;
-        //this.RestartButton.enabled = false;
+        
         this.RestartButton.gameObject.SetActive(false);
         this.InfoLabel.enabled = false;
         this.WinLabel.enabled = false;
@@ -108,13 +113,16 @@ public class GameController : MonoBehaviour {
         {
             this.GameOverLabel.enabled = true;
             this.InfoLabel.enabled = true;
+            
+            
         }
         else
         {
             this.TargetLabel.enabled = true;
             this.WinLabel.enabled = true;
+            
         }
-        
+        this._stageclearSound.Play();
         this.UFO.gameObject.SetActive(false);
         this.map.gameObject.SetActive(false);
         this.LivesLabel.enabled = false;

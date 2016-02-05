@@ -3,14 +3,19 @@ using System.Collections;
 
 public class AsteroidController : MonoBehaviour {
 
-    private Transform _transform;
+    // Public instance variables
     public float minHorizontalSpeed = 5f;
     public float maxHorizontalSpeed = 10f;
     public float minVerticalSpeed = -2f;
     public float maxVerticalSpeed = 2f;
+
+    // Private instance variables
+    private Transform _transform;
     private Vector2 _currentPosition;
     private float _horizontalSpeed;
     private float _verticalDrift;
+    
+    
     // Use this for initialization
     void Start()
     {
@@ -34,7 +39,7 @@ public class AsteroidController : MonoBehaviour {
         }
 
     }
-
+    // Method to reset the asteroids location
     public void Reset()
     {
         this._horizontalSpeed = Random.Range(this.minHorizontalSpeed, this.maxHorizontalSpeed);
