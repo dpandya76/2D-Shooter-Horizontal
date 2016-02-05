@@ -20,7 +20,14 @@ public class GameController : MonoBehaviour {
         {
 
             this._scoreValue = value;
-            this.ScoreLabel.text = "Score:" + this._scoreValue;
+            if (this._scoreValue >= 10)
+            {
+                this._endGame();
+            }
+            else {
+                this.ScoreLabel.text = "Score:" + this._scoreValue;
+
+            }
         }
     }
 
@@ -52,7 +59,11 @@ public class GameController : MonoBehaviour {
     public AsteroidController asteroids;
     public Text LivesLabel;
     public Text ScoreLabel;
+    public Text InfoLabel;
     public Text GameOverLabel;
+    public Text WinLabel;
+    public Text TargetLabel;
+    public Text TenTargetLabel;
     public UFOController UFO;
     public MapController map;
     public Text HighScoreLabel;
@@ -79,6 +90,10 @@ public class GameController : MonoBehaviour {
         this.HighScoreLabel.enabled = false;
         //this.RestartButton.enabled = false;
         this.RestartButton.gameObject.SetActive(false);
+        this.InfoLabel.enabled = false;
+        this.WinLabel.enabled = false;
+        this.TargetLabel.enabled = false;
+        this.TenTargetLabel.enabled = true;
         for (int asteroidCount=0; asteroidCount<this.asteroidNumber;asteroidCount++)
         {
             Instantiate(asteroids.gameObject);
@@ -89,11 +104,22 @@ public class GameController : MonoBehaviour {
     private void _endGame()
     {
         this.HighScoreLabel.text = "High Score:" + this._scoreValue;
-        this.GameOverLabel.enabled = true;
+        if(this._scoreValue<10)
+        {
+            this.GameOverLabel.enabled = true;
+            this.InfoLabel.enabled = true;
+        }
+        else
+        {
+            this.TargetLabel.enabled = true;
+            this.WinLabel.enabled = true;
+        }
+        
         this.UFO.gameObject.SetActive(false);
         this.map.gameObject.SetActive(false);
         this.LivesLabel.enabled = false;
         this.ScoreLabel.enabled = false;
+        this.TenTargetLabel.enabled = false;
         this.HighScoreLabel.enabled = true;
         this.RestartButton.gameObject.SetActive(true);
 

@@ -32,7 +32,7 @@ public class UFOCollider : MonoBehaviour {
         if (other.gameObject.CompareTag("Map"))
         {
             this._mapSound.Play();
-            this.gameController.ScoreValue += 100;
+            this.gameController.ScoreValue += 1;
             //Debug.Log("Map Collision");
         }
 
