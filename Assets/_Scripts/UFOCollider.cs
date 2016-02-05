@@ -32,14 +32,14 @@ public class UFOCollider : MonoBehaviour {
         if (other.gameObject.CompareTag("Map"))
         {
             this._mapSound.Play();
-            //this.gameController.ScoreValue += 100;
+            this.gameController.ScoreValue += 100;
             //Debug.Log("Map Collision");
         }
 
         if (other.gameObject.CompareTag("Asteroid"))
         {
             this._asteroidSound.Play();
-            //this.gameController.LivesValue -= 1;
+            this.gameController.LivesValue -= 1;
             //Debug.Log("Asteroid Collision");
         }
     }
